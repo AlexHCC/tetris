@@ -1,0 +1,38 @@
+board.h functions Tetris
+------------------------
+
+-void newBoard(int columns, int rows)
+	columns > 0 (columns of the board)
+	rows > 0 (rows of the board)
+
+-void newBlock(int blockType, int orientation, bool centered)
+	blockType > 0, < 6 (the 5 standard blocks, line = 1, cube = 2, triangle = 3, 3x1 = 4, 2x3 = 5)
+	orientation >0 < 5 (up = 1, down = 2, left = 3, right = 4)
+	centered (place block on top left corner = false, place block top middle = true)
+
+-bool isBlock()
+	return (is block active = true, not active = false)
+
+-bool updatePos(int posX, int posY)
+	posX = 0 or = 1 (stay where it is or move one down)
+	posY = -1, 0 or 1 (left, same pos or right)
+	return (you can update the pos. = true, another block or the wall is there = false)
+
+-bool updateRot(bool direction)
+	direction (left = true, right = false)
+	return (you can update the rot. = true, another block or the wall is there = false)
+
+-void freeBlock() (Sets isBlock = false, saves the cube coordinatesm and you can create a new block)
+
+-bool isOccupied(int column, int row)
+	column (cell pos. X, has to be within the bounds of the board columns)*
+	row (cell pos. Y, has to be within the bounds of the board rows)*
+	return (another square is there = true, is free = false)
+
+-bool isFilled(int row)
+	row (number of row, has to be within the bounds of the board rows)*
+	return (is the row filled = true, it isn't = false)
+
+-void freeBoard() (Delete the data from the mem.)
+
+*The column and row count starts form the top left corner from (0, 0).
