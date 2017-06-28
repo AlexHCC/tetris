@@ -1,4 +1,5 @@
 #include <iostream>
+#include "board.h"
 
 using namespace std;
 
@@ -8,5 +9,9 @@ int main()
      cout << "" << endl;
     cout << " ■ ■ ■" << endl;
     cout << " ■" << endl;
+
+    Board board(20, 20);
+    board.newBlock(6, 4);
+    board.debugPrint();
     return 0;
 }
