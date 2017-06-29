@@ -11,7 +11,17 @@ int main()
     cout << " ■" << endl;
 
     Board board(20, 20);
-    board.newBlock(6, 4);
+    board.newBlock(4, 3, true);
+    board.moveBlock(true);
+    board.moveBlock(true);
+
+    board.dropBlock();
+    board.newBlock(4, 3, true);
+    board.moveBlock(true);
+    //board.moveBlock(true);
+    //
+    board.dropBlock();
+
     board.debugPrint();
     return 0;
 }
