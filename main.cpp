@@ -3,6 +3,13 @@
 
 using namespace std;
 
+void debug_stop(Board& board) {
+    cout << "debug break here" << endl;
+    board.debugPrint();
+    int random = 0;
+    cin >> random;
+}
+
 int main()
 {
     cout << "\033[1;31m" << " Welcome to tetris!" << "\033[0m" << endl;
@@ -12,10 +19,22 @@ int main()
 
     Board board(20, 20);
     board.newBlock(4, 3, true);
-    board.moveBlock(true);
+
+    //debug_stop();
+
     board.moveBlock(true);
 
+    //debug_stop();
+
+    board.moveBlock(true);
+
+    //debug_stop();
+
     board.dropBlock();
+
+    debug_stop(board);
+
+
     board.newBlock(4, 3, true);
     board.moveBlock(true);
     //board.moveBlock(true);

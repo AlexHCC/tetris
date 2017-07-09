@@ -2,3 +2,12 @@
 1498592547 source:/home/alex/Desktop/tetris/Tetris/main.cpp
 	<iostream>
 
+1499559603 source:c:\users\nicolas\desktop\scripts\tetris\main.cpp
+	<iostream>
+	"board.h"
+
+1499559648 c:\users\nicolas\desktop\scripts\tetris\board.h
+	<iostream>
+	<cstring>
+	<stdlib.h>
+
