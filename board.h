@@ -192,10 +192,6 @@ public: //Funcs accessed from main()
                  || (blockType == 4)) {
                       subtractor = 2;
                       }
-        else {
-                subtractor = 3;
-        }
-
         cloneBoard = new int[columnCount * rowCount];
         for (int i = 0; i < columnCount * rowCount; i++) {
             if (board[i] == 2) {
