@@ -1,5 +1,6 @@
 #include <iostream>
 #include "board.h"
+#include "debug_tools.h"
 
 using namespace std;
 
@@ -17,28 +18,31 @@ int main()
     cout << " ■ ■ ■" << endl;
     cout << " ■" << endl;
 
-    Board board(20, 20);
+    Board board(8, 4);
+
+    //debug_stop(board);
+
     board.newBlock(4, 3, true);
 
-    //debug_stop();
+    //debug_stop(board);
 
     board.moveBlock(true);
 
-    //debug_stop();
+    //debug_stop(board);
 
     board.moveBlock(true);
 
-    //debug_stop();
+    //debug_stop(board);
 
     board.dropBlock();
 
-    debug_stop(board);
-
+    //debug_stop(board);
 
     board.newBlock(4, 3, true);
     board.moveBlock(true);
-    //board.moveBlock(true);
-    //
+
+    debug_stop(board);
+
     board.dropBlock();
 
     board.debugPrint();
