@@ -11,8 +11,28 @@ void debug_stop(Board& board) {
     cin >> random;
 }
 
-int main()
-{
+void original_main() {
+    cout << "\033[1;31m" << " Welcome to tetris!" << "\033[0m" << endl;
+    cout << "" << endl;
+    cout << " ■ ■ ■" << endl;
+    cout << " ■" << endl;
+
+    Board board(20, 20);
+    board.newBlock(4, 3, true);
+    board.moveBlock(true);
+    board.moveBlock(true);
+
+    board.dropBlock();
+    board.newBlock(4, 3, true);
+    board.moveBlock(true);
+    //board.moveBlock(true);
+    //
+    board.dropBlock();
+
+    board.debugPrint();
+}
+
+void custom_main() {
     cout << "\033[1;31m" << " Welcome to tetris!" << "\033[0m" << endl;
      cout << "" << endl;
     cout << " ■ ■ ■" << endl;
@@ -24,15 +44,11 @@ int main()
 
     board.newBlock(4, 3, true);
 
-    //debug_stop(board);
+    for (int i = 0; i < 40; i++) {
+        board.moveBlock(true);
+    }
 
-    board.moveBlock(true);
-
-    //debug_stop(board);
-
-    board.moveBlock(true);
-
-    //debug_stop(board);
+    debug_stop(board);
 
     board.dropBlock();
 
@@ -46,5 +62,11 @@ int main()
     board.dropBlock();
 
     board.debugPrint();
+}
+
+int main()
+{
+    original_main();
+    //custom_main();
     return 0;
 }

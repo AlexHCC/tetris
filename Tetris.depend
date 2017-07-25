@@ -2,20 +2,20 @@
 1498592547 source:/home/alex/Desktop/tetris/Tetris/main.cpp
 	<iostream>
 
-1500831528 source:c:\users\nicolas\desktop\scripts\tetris\main.cpp
+1500955662 source:c:\users\nicolas\desktop\scripts\tetris\main.cpp
 	<iostream>
 	"board.h"
 	"debug_tools.h"
 
-1500831695 c:\users\nicolas\desktop\scripts\tetris\board.h
+1500955285 c:\users\nicolas\desktop\scripts\tetris\board.h
 	<iostream>
 	<cstring>
 	<stdlib.h>
 	"debug_tools.h"
 
-1500789875 source:c:\users\nicolas\desktop\scripts\tetris\debug_tools.cpp
+1500856703 source:c:\users\nicolas\desktop\scripts\tetris\debug_tools.cpp
 	"debug_tools.h"
 
-1500789879 c:\users\nicolas\desktop\scripts\tetris\debug_tools.h
+1500856703 c:\users\nicolas\desktop\scripts\tetris\debug_tools.h
 	<iostream>
 

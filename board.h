@@ -150,7 +150,6 @@ public: //Funcs accessed from main()
             for (int i = 0; i < (rowCount * columnCount); i++) {
                 board[i] = 0;
             }
-            cout << "here" << endl;
         } else {
             cerr << "ERROR::BOARD_LENGTH_VALUES" << endl;
         }
@@ -264,10 +263,6 @@ public: //Funcs accessed from main()
             cout << endl;
         }
 
-        //cout << "before placing part" << endl;
-        //int a;
-        //cin >> a;
-
         //ERROR: rowCount and columnCount were switched
 
         height = columnCount * (rowCount - subtractor); //Sets the block height as low as possible
@@ -279,11 +274,6 @@ public: //Funcs accessed from main()
         while (!place) {
 
             placeNum(blockType, rotation); // And then places the block at that height
-
-            //cout << "here" << endl;
-            //debugPrint();
-            //int a;
-            //cin >> a;
 
             //-earlier, a blockCount value was calculated indicated how many 1's
             //were on the board (signifying inactive block occupation)
