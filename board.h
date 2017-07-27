@@ -219,7 +219,7 @@ public:
             cloneBoard[i] = board[i];
         }
 
-
+        /*
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
                 int oned_index = (i * columnCount) + (j);
@@ -227,6 +227,7 @@ public:
             }
             cout << endl;
         }
+        */
 
         height = columnCount * (rowCount - subtractor);
 
@@ -241,7 +242,7 @@ public:
                 }
             }
 
-            cout << "blockCount is " << blockCount << ", blockStore is " << blockStore << endl;
+            //cout << "blockCount is " << blockCount << ", blockStore is " << blockStore << endl;
 
             if (blockCount != blockStore) {
                 height = height - columnCount;
@@ -251,7 +252,6 @@ public:
                 }
 
             } else {
-                cout << "a successful place was made, should break out of loop now " << endl;
                 place = true;
             }
         }
@@ -262,14 +262,44 @@ public:
             }
         }
 
-        //TODO: Check lines and clear!
-        //TODO: if ontop block looese!
+    }
 
+    bool checkGameOver() {
+        for (int i = 0; i < columnCount * 4; i++) {
+            if (board[i] == 1) {return true;}
+            system("cls");
+            return false;
+        }
+    }
+
+    int clearLine() {
+        int countI = 0;
+        int clearTimes = 0;
+
+        for (int i = 0; i < rowCount;) {
+            for (int j = 0; j < columnCount; j++) {
+                if(board[i + j] == 1) { countI = countI + 1; }
+            }
+
+            if (countI == columnCount) {
+                clearTimes++;
+                int j = i;
+                while (j > 0) {
+                    for (int k = 0; k < columnCount; k++) {
+                        board[j + k] = board[j + k - columnCount];
+                    }
+                    j = j - 1;
+                }
+                for (int n = 0; n < columnCount; n++) { board[n] = 0; }
+            }
+            i = i + columnCount;
+        }
+
+        return clearTimes;
     }
 
     void debugPrint() {
-        system("clear");
-        system("clear");
+        system("cls");
         for (int i = 0; i < rowCount; i++) {
             cout << endl;
             for (int k = 0; k < columnCount; k++) {

@@ -15,6 +15,13 @@ int main() {
     board.moveBlock(true);
 
     board.dropBlock();
+
+    if (board.checkGameOver()) {
+        cout << "Game over" << endl;
+        return 0;
+    }
+
+    board.clearLine();
     board.debugPrint();
 
     return 0;
