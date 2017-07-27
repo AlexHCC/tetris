@@ -15,6 +15,7 @@ private:
     int blockType, rotation;
     int offset = 0;
     int height = 0;
+    int numIgn = 4;
 
 private:
 
@@ -265,9 +266,8 @@ public:
     }
 
     bool checkGameOver() {
-        for (int i = 0; i < columnCount * 4; i++) {
-            if (board[i] == 1) {return true;}
-            system("cls");
+        for (int i = 0; i < columnCount * numIgn; i++) {
+            if (board[i] == 1) { system("cls"); return true; }
             return false;
         }
     }
@@ -276,7 +276,7 @@ public:
         int countI = 0;
         int clearTimes = 0;
 
-        for (int i = 0; i < rowCount;) {
+        for (int i = columnCount*numIgn; i < rowCount;) {
             for (int j = 0; j < columnCount; j++) {
                 if(board[i + j] == 1) { countI = countI + 1; }
             }
