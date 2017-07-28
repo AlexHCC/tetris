@@ -285,13 +285,14 @@ public:
             if (countI == columnCount) {
                 clearTimes++;
                 int j = i;
-                while (j > 0) {
+                while (j > numIgn) {
                     for (int k = 0; k < columnCount; k++) {
                         board[j + k] = board[j + k - columnCount];
                     }
                     j = j - 1;
                 }
-                for (int n = 0; n < columnCount; n++) { board[n] = 0; }
+                //No real need for it since the first 4 rows wont have any ones.
+                //for (int n = 0; n < columnCount*numIgn n++) { board[n] = 0; }
             }
             i = i + columnCount;
         }
