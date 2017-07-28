@@ -4,6 +4,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 void debug_stop(Board& board) {
     cout << "debug break here" << endl;
     board.debugPrint();
@@ -16,6 +17,9 @@ void original_main() {
     cout << "" << endl;
     cout << " ■ ■ ■" << endl;
     cout << " ■" << endl;
+=======
+int main() {
+>>>>>>> refs/remotes/origin/master
 
     Board board(20, 20);
     board.newBlock(4, 3, true);
@@ -23,6 +27,7 @@ void original_main() {
     board.moveBlock(true);
 
     board.dropBlock();
+<<<<<<< HEAD
     board.newBlock(4, 3, true);
     board.moveBlock(true);
     //board.moveBlock(true);
@@ -68,5 +73,20 @@ int main()
 {
     original_main();
     //custom_main();
+=======
+    board.newBlock(2, 1, true);
+    board.moveBlock(true);
+
+    board.dropBlock();
+
+    if (board.checkGameOver()) {
+        cout << "Game over" << endl;
+        return 0;
+    }
+
+    board.clearLine();
+    board.debugPrint();
+
+>>>>>>> refs/remotes/origin/master
     return 0;
 }
