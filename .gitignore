@@ -1,5 +1,6 @@
 *.zip
 *.depend
 *.layout
+*.txt
 Tetris.cbp
-boardh notes.txt
+Tetris.depend
