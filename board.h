@@ -285,7 +285,7 @@ public:
             if (countI == columnCount) {
                 clearTimes++;
                 int j = i;
-                while (j > numIgn) {
+                while (j > numIgn - 1) {
                     for (int k = 0; k < columnCount; k++) {
                         board[j + k] = board[j + k - columnCount];
                     }
