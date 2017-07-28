@@ -3,25 +3,42 @@
 
 using namespace std;
 
-int main()
-{
-    cout << "\033[1;31m" << " Welcome to tetris!" << "\033[0m" << endl;
-     cout << "" << endl;
-    cout << " ■ ■ ■" << endl;
-    cout << " ■" << endl;
+void moveBlock(Board &board, int numOfTimes, bool direction) {
+    for (int i = 0; i < numOfTimes; i++) {
+        board.moveBlock(direction);
+    }
+}
 
-    Board board(20, 20);
-    board.newBlock(4, 3, true);
-    board.moveBlock(true);
-    board.moveBlock(true);
+int main() {
 
-    board.dropBlock();
-    board.newBlock(4, 3, true);
-    board.moveBlock(true);
-    //board.moveBlock(true);
-    //
+    Board board(10, 10);
+
+    board.newBlock(4, 3, false);
     board.dropBlock();
 
+    board.newBlock(4, 3, false);
+    moveBlock(board, 2, true);
+    board.dropBlock();
+
+    board.newBlock(4, 3, false);
+    moveBlock(board, 4, true);
+    board.dropBlock();
+
+    board.newBlock(4, 3, false);
+    moveBlock(board, 6, true);
+    board.dropBlock();
+
+    board.newBlock(4, 3, false);
+    moveBlock(board, 8, true);
+    board.dropBlock();
+
+    if (board.checkGameOver()) {
+        cout << "Game over" << endl;
+        return 0;
+    }
+
+    board.clearLine();
     board.debugPrint();
+
     return 0;
 }
