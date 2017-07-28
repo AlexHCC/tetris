@@ -276,7 +276,7 @@ public:
         int clearTimes = 0;
 
         for (int i = columnCount*numIgn; i < columnCount*rowCount;) {
-            
+
             int countI = 0;
             for (int j = 0; j < columnCount; j++) {
                 if(board[i + j] == 1) { countI = countI + 1; }
