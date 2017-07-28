@@ -33,9 +33,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="board.h" />
-		<Unit filename="debug_tools.cpp" />
-		<Unit filename="debug_tools.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="test_tools.cpp" />
+		<Unit filename="test_tools.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

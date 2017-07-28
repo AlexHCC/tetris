@@ -1,14 +1,17 @@
 #include <iostream>
+
 #include "board.h"
+#include "boardh_testing.h"
 
 using namespace std;
 
 int main() {
-    Board board(20,20);
-    board.newBlock(4, 3, true);
-    board.newBlock(5,3, true);
+    //run_tests(true);
+    clear_debug_file();
+    test_clear_2_lines_simul();
+    test_game_over_height();
 
-/*
+    /*
     Board board(20, 20);
 
     board.newBlock(4, 3, true);
@@ -29,6 +32,7 @@ int main() {
 
     board.clearLine();
     board.debugPrint();
-*/
+    */
+
     return 0;
 }

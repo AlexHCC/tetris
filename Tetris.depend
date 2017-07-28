@@ -2,9 +2,10 @@
 1498592547 source:/home/alex/Desktop/tetris/Tetris/main.cpp
 	<iostream>
 
-1501207907 source:c:\users\nicolas\desktop\scripts\tetris\main.cpp
+1501224118 source:c:\users\nicolas\desktop\scripts\tetris\main.cpp
 	<iostream>
 	"board.h"
+	"boardh_testing.h"
 
 1501206529 c:\users\nicolas\desktop\scripts\tetris\board.h
 	<iostream>
@@ -16,4 +17,19 @@
 
 1500856703 c:\users\nicolas\desktop\scripts\tetris\debug_tools.h
 	<iostream>
+
+1501219351 source:c:\users\nicolas\desktop\scripts\tetris\test_tools.cpp
+	"test_tools.h"
+
+1501219344 c:\users\nicolas\desktop\scripts\tetris\test_tools.h
+	<iostream>
+	<fstream>
+	<string>
+
+1501223247 c:\users\nicolas\desktop\scripts\tetris\boardh_testing.h
+	"test_tools.h"
+	"board.h"
+
+1501224140 source:c:\users\nicolas\desktop\scripts\tetris\boardh_testing.cpp
+	"boardh_testing.h"
 
